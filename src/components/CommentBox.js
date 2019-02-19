@@ -8,8 +8,7 @@ class CommentBox extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    //TODO - Call an action creator
-    // this.props.saveComment(this.state.comment);
+    this.props.saveComment(this.state.comment);
     this.setState({ comment: "" });
   };
   render() {
@@ -27,5 +26,5 @@ class CommentBox extends Component {
 
 export default connect(
   null,
-  { actions }
+  actions
 )(CommentBox);
